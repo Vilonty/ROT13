@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const inputArea = document.getElementById('inputArea');
+    
+    inputArea.addEventListener('input', function() {
+        encoder();
+    });
+
+    inputArea.addEventListener('blur', function() {
+        encoder();
+    });
+
+});
+
 function encoder(){
 
     let alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -34,9 +48,16 @@ function encoder(){
 };
 
 function setAlphabet(alphabet, j){
+
+    let res;
+
+    if((j + 13) >= alphabet.length){
+
+        res = alphabet[(j + 13) - alphabet.length];
+    }else{
+
+        res = alphabet[j + 13];
+    }
     
-
-    return (j + 13) >= alphabet.length ? alphabet[(j + 13) - alphabet.length] : alphabet[j + 13];
-
-
+    return res;
 };

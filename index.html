@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
+<head>
+    <title>ROT13 Шифратор</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header></header>
 
-        <title>Рот 13</title>
+    <main>
 
-        <link rel="stylesheet" href="./style/style.css">
-        <script src="./script/script.js"></script>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-
-    </head>
-    <body>
-        <header>
-
-        </header>
-
-        <main>
-
-            <div class="central_block">
-
-                <div class="Panel">
-
-                    <p>Текст</p>
-                    <textarea id="inputArea" onblur="encoder()"></textarea>
-                    <button onclick="encoder()">Шифровать</button>
-
+        <div class="centralBlock">
+            <div class="inputs">
+                <div class="inputPanel">
+                    <p>ввод</p>
+                    <textarea id="inputArea"></textarea>
                 </div>
-
-                <div class="Panel">
-
-                    <p>Результат</p>
+                <div class="outputPanel">
+                    <p>вывод</p>
                     <textarea id="outputArea" readonly></textarea>
-
                 </div>
-
             </div>
+        </div>
 
+        <div class="alphabetInfo">
+            <h2>Алфавит ROT13</h2>
+            <div class="alphabetPair">
+                <div class="alphabetOriginal">
+                    <h3>Исходный:</h3>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p>abcdefghijklmnopqrstuvwxyz</p>
+                </div>
+                <div class="alphabetRot13">
+                    <h3>Зашифрованный:</h3>
+                    <p>NOPQRSTUVWXYZABCDEFGHIJKLM</p>
+                    <p>nopqrstuvwxyzabcdefghijklm</p>
+                </div>
+            </div>
+            <div class="operationInfo">
+                <h3>Как работает ROT13:</h3>
+                <p>Каждая буква заменяется на букву, находящуюся на 13 позиций дальше в алфавите.</p>
+                <p>Не-алфавитные символы остаются без изменений.</p>
+            </div>
+        </div>
 
-        </main>
+    </main>
 
-        <footer>
-
-        </footer>       
-
-    </body>
+    <footer></footer>
+</body>
 </html>

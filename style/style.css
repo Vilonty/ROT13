@@ -1,4 +1,5 @@
 body {
+
     padding: 0;
     margin: 0;
 
@@ -8,6 +9,8 @@ body {
     justify-content: center;
 
     background-color: #f5f5f5;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -36,12 +39,13 @@ main{
     margin-top: 5%;
     margin-bottom: 5%;
     border-radius: 15px;
-    margin-left: 20%;
+    margin-left: 10%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 }
 
 .inputs{
+
     display: flex;
     justify-content: center;
     height: 70vh;
@@ -49,11 +53,13 @@ main{
 }
 
 .inputPanel {
+
     background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .outputPanel {
+
     border: 1px solid #8c729589;
     background-color: #fbeffb;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -67,9 +73,11 @@ main{
     flex: 1;
     display: flex;
     flex-direction: column;
+
     border-radius: 15px;
+
     padding: 15px;
-    position: relative;
+
 }
 
 .inputPanel p, .outputPanel p {
@@ -98,11 +106,14 @@ main{
 }
 
 .inputPanel p {
+
     border: 2px solid #9e9e9e;
     color: #888888;
+
 }
 
 .outputPanel p {
+
     border: 2px solid #d0a0d0;
     background-color: #f0e0f0;
     color: #bd78bd;
@@ -135,24 +146,38 @@ textarea {
 
     padding: 0 2%;
     height: 70vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 40px;
-    background-color: white;
+
+    
     max-width: 500px;
+
+    background-color: white;
+    
     width: 50%;
-    margin-top: 2%;
+    margin: 2% auto 40px -1%;
+
     
 }
+
 .alphabetInfo h2{
 
     text-align: center;
 
 }
+
+.alphabetInfo h3{
+
+    text-align: center;
+
+}
+
 .alphabetPair {
 
     display: flex;
@@ -162,12 +187,125 @@ textarea {
 }
 
 .alphabetOriginal, .alphabetRot13 {
+
     text-align: center;
-    padding: 15px;
+
+    padding: 2%;
     border-radius: 10px;
-    margin: 10px;
-    min-width: 200px; 
+
+    margin: 2%;
+    max-width: 90%; 
+
     background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 15px;
+}
+
+@media (max-width: 1095px) {
+
+.inputs {
+
+    flex-direction: column;
+
+}
+
+.alphabetInfo {
+
+    margin-top: 20px;
+
+}
+
+.centralBlock {
+
+    margin-left: 0;
+    width: calc(100% - 40px);
+
+}
+
+.alphabetPair {
+
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.alphabetOriginal p, .alphabetRot13 p{
+
+    font-size: 10px;
+    overflow-wrap: break-word; 
+
+}
+
+
+.alphabetOriginal, .alphabetRot13 {
+
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 30vw;
+
+}
+
+.inputPanel p, .outputPanel p{
+
+    font-size: 9px;
+
+}
+
+}
+
+
+@media (max-width: 480px) {
+
+main{
+
+    flex-direction: column;
+
+}
+
+.centralBlock{
+    margin: 0;
+}
+
+.inputPanel p, .outputPanel p {
+
+    font-size: 10px;
+    padding: 3px 10px;
+
+}
+
+textarea {
+
+    font-size: 14px;
+
+}
+
+.alphabetInfo{
+    margin-top: -10%;
+    margin-bottom: 0;
+
+    width: 96%;
+    text-align: center;
+    
+}
+
+.alphabetInfo h2 {
+
+    font-size: 18px;
+
+}
+
+.alphabetOriginal, .alphabetRot13{
+
+    width: 100vw;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.alphabetOriginal p, .alphabetRot13 p{
+
+    font-size: 12px;
+    text-align: center;
+
+}
+  
 }

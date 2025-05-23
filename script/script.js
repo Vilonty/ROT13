@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     const inputArea = document.getElementById('inputArea');
-    
+
     inputArea.addEventListener('input', function() {
         encoder();
     });
 
-    inputArea.addEventListener('blur', function() {
-        encoder();
     });
-
-});
 
 function encoder(){
 

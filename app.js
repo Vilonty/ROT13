@@ -40,7 +40,14 @@ function onrequest(request, Response) {
 
     fs.readFile(filePath, function(err,data){
 
+
+        //обработка ошибок, если url не найден, тогда выводится страница с надписью 404
+        
         if (err) {
+
+            //ENOENT ошибка, означающая, что указанный путь к файлу или каталогу не существует в файловой системе
+            //writeHead задаёт http ответ
+
             if (err.code === 'ENOENT') {
                 Response.writeHead(404, { 'Content-Type': 'text/html' });
                 Response.end('<h1>404 Not Found</h1>');
